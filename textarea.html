@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Caracteres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #contador {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador de Caracteres</h1>
+    <textarea id="texto" rows="10" cols="30" placeholder="Escribe aquí..."></textarea>
+    <div id="contador">Caracteres: 0</div>
+
+    <script>
+        const textarea = document.getElementById('texto');
+        const contador = document.getElementById('contador');
+
+        textarea.addEventListener('input', function() {
+            const cantidadCaracteres = textarea.value.length;
+            contador.textContent = 'Caracteres: ' + cantidadCaracteres;
+        });
+    </script>
+</body>
+</html>
