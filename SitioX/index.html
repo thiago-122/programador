@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerveceria X</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/cerveceria.css" rel="stylesheet">
+    <div class="container-fluid hero">
+        <div class="row align-items-center">
+            <div class="col-lg-3 offset-lg-2">
+                <h1>Bienvenido a Cervecería X</h1>
+                <p>Descubre nuestras mejores cervezas artesanales.</p>
+            </div>
+        </div>
+    </div>
+    <link href="css/cerveceria.css" rel="stylesheet">
+    <div class="container novedades">
+        <div class="row">
+            <div class="col-lg-4 py-3">
+                <div class="novedad" data-bs-toggle="modal" data-bs-target="#novedadModal1">
+                    <img src="img/novedad1.jpg" alt="Novedad 1" class="img-fluid">
+                    <h3>Título de Novedad 1</h3>
+                </div>
+            </div>
+            <!-- Repite para más novedades -->
+        </div>
+    </div>
+    <div class="modal fade" id="novedadModal1" tabindex="-1" aria-labelledby="novedadModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="novedadModalLabel1">Título de Novedad 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Detalles de la novedad 1.
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    <!-- Contenido del sitio -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

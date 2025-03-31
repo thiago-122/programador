@@ -1,0 +1,10 @@
+h1, h2 {
+    font-family: 'Alfa Slab One', sans-serif;
+}
+
+.hero {
+    background-image: url('img/hero-background.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
