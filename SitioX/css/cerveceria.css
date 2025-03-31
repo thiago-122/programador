@@ -8,3 +8,55 @@ h1, h2 {
     background-size: cover;
     background-position: center;
 }
+.novedad {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.novedad:hover {
+    transform: scale(1.05);
+}
+
+.novedad img {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.novedad:hover img {
+    filter: brightness(1);
+}
+.testimonios {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.testimonios h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.carousel-item p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.carousel-item small {
+    display: block;
+    text-align: center;
+    color: #6c757d;
+}
+.contacto {
+    padding: 50px 0;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+}
