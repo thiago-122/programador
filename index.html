@@ -137,3 +137,27 @@ app.listen(port, () => {
     <button type="submit">Enviar</button>
   </form>
 {{/if}}
+const express = require('express');
+const session = require('express-session');
+const app = express();
+app.use(session({
+secret: 'tu_clave_secreta_muy_segura',
+resave: false,
+saveUninitialized: true,
+cookie: { secure: false }
+}));
+app.get('/establecer-nombre/:nombre', (req, res) => {
+req.session.nombre = req.params.nombre;
+res.send(`Nombre "${req.params.nombre}" guardado en la sesión.`);
+});
+app.get('/mostrar-nombre', (req, res) => {
+if (req.session.nombre) {
+res.send(`El nombre almacenado en la sesión es: ${req.session.nombre}`);
+} else {
+res.send;
+}
+});
+
+app.listen(3000, () => {
+console.log('Servidor en puerto 3000');
+});
