@@ -105,4 +105,35 @@ app.get('/blog', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
-```
+app.use(express.urlencoded({ extended: true }));
+const exphbs = require('express-handlebars');
+app.engine('hbs', exphbs.engine({ extname: '.hbs' }));
+app.set('view engine', 'hbs');
+app.set('views', './views');
+app.get('/contacto', (req, res) => {
+  res.render('contacto', { titulo: 'Formulario de Contacto' });
+});
+app.post('/contacto', (req, res) => {
+  const { nombre, email, mensaje } = req.body;
+  res.render('contacto', { 
+    titulo: 'Formulario de Contacto',
+    enviado: true,
+    nombre,
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
+});
+
+<h1>{{titulo}}</h1>
+{{#if enviado}}
+  <p>Gracias, {{nombre}}, por contactarnos.</p>
+{{else}}
+  <form method="POST" action="/contacto">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu email" required>
+    <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+{{/if}}
