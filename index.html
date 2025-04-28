@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerveceria X</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/cerveceria.css" rel="stylesheet">
+    <div class="container-fluid hero">
+        <div class="row align-items-center">
+            <div class="col-lg-3 offset-lg-2">
+                <h1>Bienvenido a Cervecería X</h1>
+                <p>Descubre nuestras mejores cervezas artesanales.</p>
+            </div>
+        </div>
+    </div>
+    <link href="css/cerveceria.css" rel="stylesheet">
+    <div class="container novedades">
+        <div class="row">
+            <div class="col-lg-4 py-3">
+                <div class="novedad" data-bs-toggle="modal" data-bs-target="#novedadModal1">
+                    <img src="img/novedad1.jpg" alt="Novedad 1" class="img-fluid">
+                    <h3>Título de Novedad 1</h3>
+                </div>
+            </div>
+            <!-- Repite para más novedades -->
+        </div>
+    </div>
+    <div class="modal fade" id="novedadModal1" tabindex="-1" aria-labelledby="novedadModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="novedadModalLabel1">Título de Novedad 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Detalles de la novedad 1.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container testimonios">
+        <h2>Testimonios</h2>
+        <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>"Excelente servicio y cervezas de calidad."</p>
+                    <small>- Cliente Satisfecho</small>
+                </div>
+                <div class="carousel-item">
+                    <p>"Un lugar acogedor con una gran variedad de cervezas."</p>
+                    <small>- Amante de la Cerveza</small>
+                </div>
+                <!-- Más testimonios -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+    <div class="container contacto">
+        <h2>Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>    
+</head>
+<body>
+    <!-- Contenido del sitio -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+app.get('/', (req, res) => {
+  res.send('<h1>Inicio</h1><p>Bienvenido a la sección Inicio.</p>');
+});
+app.get('/nosotros', (req, res) => {
+  res.send('<h1>Nosotros</h1><p>Esta es la sección Nosotros.</p>');
+});
+app.get('/servicios', (req, res) => {
+  res.send('<h1>Servicios</h1><p>Conoce nuestros servicios.</p>');
+});
+app.get('/contacto', (req, res) => {
+  res.send('<h1>Contacto</h1><p>Contáctanos aquí.</p>');
+});
+app.get('/blog', (req, res) => {
+  res.send('<h1>Blog</h1><p>Lee nuestras últimas noticias.</p>');
+});
+app.listen(port, () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
+});
+```
