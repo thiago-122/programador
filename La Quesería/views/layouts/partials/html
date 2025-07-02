@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Quesería - Tu tienda de quesos artesanales</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    {{> partials/navbar}}
+    
+    <main class="container">
+        @{{> body}}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>La Quesería</h3>
+            <p>Quesos artesanales de calidad</p>
+            <ul class="footer-links">
+                <li><a href="/productos">Nuestros Quesos</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/pedidos">Seguimiento de Pedidos</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
